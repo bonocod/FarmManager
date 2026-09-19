@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 9% 97%;
+    --foreground: 20 14% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14% 14%;
+    --primary: 142 60% 28%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 45 90% 51%;
+    --secondary-foreground: 20 14% 14%;
+    --muted: 60 5% 93%;
+    --muted-foreground: 25 5% 50%;
+    --accent: 45 90% 51%;
+    --accent-foreground: 20 14% 14%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 60 5% 88%;
+    --input: 60 5% 88%;
+    --ring: 142 60% 28%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Ensure date inputs look consistent */
+  input[type="date"] {
+    color-scheme: light;
+  }
+}
+
+@layer utilities {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
